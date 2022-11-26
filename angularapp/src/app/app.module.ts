@@ -7,6 +7,8 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { warningComponent } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
+import { FormsModule } from '@angular/forms';
+import { TwowayComponent } from './twoway/twoway.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { SuccessComponent } from './success/success.component';
     ServerComponent,
     ServersComponent,
     warningComponent,
-    SuccessComponent
+    SuccessComponent,
+    TwowayComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
