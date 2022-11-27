@@ -9,6 +9,10 @@ import { warningComponent } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
 import { FormsModule } from '@angular/forms';
 import { TwowayComponent } from './twoway/twoway.component';
+import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
+import { NgswitchComponent } from './ngswitch/ngswitch.component';
+import { DemocourseComponent } from './democourse/democourse.component';
+import { NgswitchassignComponent } from './ngswitchassign/ngswitchassign.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { TwowayComponent } from './twoway/twoway.component';
     ServersComponent,
     warningComponent,
     SuccessComponent,
-    TwowayComponent
+    TwowayComponent,
+    DemodirectivesComponent,
+    NgswitchComponent,
+    DemocourseComponent,
+    NgswitchassignComponent
   ],
   imports: [
     BrowserModule,

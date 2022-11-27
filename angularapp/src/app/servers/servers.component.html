@@ -3,7 +3,7 @@
 
 <p> Server with id {{serverId}} is {{getServerStatus()}} </p>
 
-<button [disabled]="!allowNewServer" (click)="onCreateServer()"> Add server </button>
+<button [disabled]="!allowNewServer" (click)="onCreateServer()" class="btn btn-primary"> Add server </button>
 
 
  <div>{{serverCreationStatus}} </div>
