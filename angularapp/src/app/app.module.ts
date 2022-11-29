@@ -13,6 +13,10 @@ import { DemodirectivesComponent } from './demodirectives/demodirectives.compone
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { DemocourseComponent } from './democourse/democourse.component';
 import { NgswitchassignComponent } from './ngswitchassign/ngswitchassign.component';
+import { AttriComponent } from './attri/attri.component';
+import { CustdirDirective } from './custdir.directive';
+import { DirectivesComponent } from './directives/directives.component';
+import { CusdirassinDirective } from './cusdirassin.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { NgswitchassignComponent } from './ngswitchassign/ngswitchassign.compone
     DemodirectivesComponent,
     NgswitchComponent,
     DemocourseComponent,
-    NgswitchassignComponent
+    NgswitchassignComponent,
+    AttriComponent,
+    CustdirDirective,
+    DirectivesComponent,
+    CusdirassinDirective
   ],
   imports: [
     BrowserModule,
