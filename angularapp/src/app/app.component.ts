@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularapp';
+  title = 'Angular learning';
+  // uname = 'I am from app component';
+  
+
+//   EmployeeRecords: any =[
+//     {
+//       eName: 'Nisha', eCity: 'Mumbai', eSalary: '200000'
+//     },
+//     {
+//       eName: 'Sneha', eCity: 'pune', eSalary: '150000'
+//     }
+//   ]
 }

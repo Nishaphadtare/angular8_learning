@@ -17,6 +17,8 @@ import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
 import { DirectivesComponent } from './directives/directives.component';
 import { CusdirassinDirective } from './cusdirassin.directive';
+import { DemoComponent } from './demo/demo.component';
+import { InputdecComponent } from './inputdec/inputdec.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { CusdirassinDirective } from './cusdirassin.directive';
     AttriComponent,
     CustdirDirective,
     DirectivesComponent,
-    CusdirassinDirective
+    CusdirassinDirective,
+    DemoComponent,
+    InputdecComponent
   ],
   imports: [
     BrowserModule,
