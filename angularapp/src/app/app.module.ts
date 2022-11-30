@@ -37,7 +37,8 @@ import { InputdecComponent } from './inputdec/inputdec.component';
     DirectivesComponent,
     CusdirassinDirective,
     DemoComponent,
-    InputdecComponent
+    InputdecComponent,
+    
   ],
   imports: [
     BrowserModule,

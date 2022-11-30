@@ -9,12 +9,13 @@ import { EventEmitter } from 'protractor';
 export class DemoComponent implements OnInit {
 
 
-  @Input() myinputMsg : string;
+  // @Input() myinputMsg : string;
+  @Input() employee: any;
 //   @Output() foodevent: EventEmitter<string>= new EventEmitter<string>();
   constructor() { }
 
   ngOnInit() {
-    console.log('from parent', this.myinputMsg);
+    console.log('from parent', this.employee);
     
   }
 // addtofood(value){

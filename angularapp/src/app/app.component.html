@@ -36,11 +36,22 @@
 <!-- <app-ngswitch></app-ngswitch> -->
 
 <!-- <app-demodirectives></app-demodirectives> -->
+<!-- <app-attri></app-attri>
+<div *ngFor="let e of EmployeeRecords">
+   <app-demo [employee]="e">
 
-<!-- <app-attri></app-attri> -->
+</app-demo> 
+</div> -->
 
-<!-- <app-demo [myinputMsg]="uname"></app-demo> -->
-<!-- <app-inputdec [myinputMsg]="emp_id"></app-inputdec> -->
+<div *ngFor="let e of EmployeeInfo">
+  <app-inputdec [employee]="e">
+
+  </app-inputdec>
+</div>
+
+
+
+
 
 <!-- <app-twoway></app-twoway> -->
 

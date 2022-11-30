@@ -7,17 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InputdecComponent implements OnInit {
 
-  
-
-
-  
+  @Input() employee : any ;
   constructor() { }
 
   ngOnInit() {
-  
-
+    console.log('from Parent', this.employee);
+    
   }
- 
-
 
 }

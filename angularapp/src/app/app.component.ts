@@ -7,15 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular learning';
-  // uname = 'I am from app component';
+  uname = 'I am from app component';
+
   
 
-//   EmployeeRecords: any =[
-//     {
-//       eName: 'Nisha', eCity: 'Mumbai', eSalary: '200000'
-//     },
-//     {
-//       eName: 'Sneha', eCity: 'pune', eSalary: '150000'
-//     }
-//   ]
+  // EmployeeRecords: any =[
+  //   {
+  //     eName: 'Nisha', eCity: 'Mumbai', eSalary: '200000'
+  //   },
+  //   {
+  //     eName: 'Sneha', eCity: 'pune', eSalary: '150000'
+  //   }
+  // ]
+
+  EmployeeInfo : any = [
+    {
+      emp_id: " 1", emp_name: "Sneha",  emp_company: 'Infosys',  emp_salary: '200000'
+    },
+    
+  
+  ]
 }
