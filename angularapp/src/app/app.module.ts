@@ -19,6 +19,9 @@ import { DirectivesComponent } from './directives/directives.component';
 import { CusdirassinDirective } from './cusdirassin.directive';
 import { DemoComponent } from './demo/demo.component';
 import { InputdecComponent } from './inputdec/inputdec.component';
+import HooksComponent from './hooks/hooks.component';
+import { AssigndirectivesComponent } from './assigndirectives/assigndirectives.component';
+import { DocheckassigComponent } from './docheckassig/docheckassig.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,9 @@ import { InputdecComponent } from './inputdec/inputdec.component';
     CusdirassinDirective,
     DemoComponent,
     InputdecComponent,
+    HooksComponent,
+    AssigndirectivesComponent,
+    DocheckassigComponent,
     
   ],
   imports: [
