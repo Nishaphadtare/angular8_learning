@@ -30,9 +30,14 @@ product: Product = new Product();
     {
       emp_id: " 1", emp_name: "Sneha",  emp_company: 'Infosys',  emp_salary: '200000'
     },
-    
-  
   ]
+
+  appchildExilt: boolean = true;
+  
+  Destroy(){
+    this.appchildExilt = false;
+  }
+
   handleData(value) {
     this.data= value.target.value
   }

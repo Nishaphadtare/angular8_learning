@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnInit, SimpleChange, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnDestroy, OnInit, SimpleChange, SimpleChanges, ViewChild } from '@angular/core';
 import { Product } from '../models/product';
 
 @Component({
@@ -6,17 +6,26 @@ import { Product } from '../models/product';
   templateUrl: './hooks.component.html',
   styleUrls: ['./hooks.component.css']
 })
-export default class HooksComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked{
+export default class HooksComponent implements  OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy{
   @Input() userid: number;
   @Input() parentData : string;
   @Input() product: Product;
   @ContentChild("child", {static: false}) contentChild: ElementRef;
   @ViewChild("childhook", {static: false}) viewchild: ElementRef;
+  
 pi;
+
+counter;
+num:number=1;
 
   constructor() { 
     this.pi = 3.14;
-    console.log('HooksComponent constructor called');
+    console.log(' constructor called');
+    
+  }
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy called');
+    clearInterval(this.counter)
     
   }
   ngAfterViewChecked(): void {
@@ -69,7 +78,12 @@ pi;
     }
    
   ngOnInit()    {
-      console.log('HooksComponent ngOnInit called');
+      console.log('ngOnInit called');
+
+      this.counter =setInterval(() =>{
+        this.num = this.num + 1 ; 
+        console.log(this.num); 
+      }, 1000)
     }
 
 }
