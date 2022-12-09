@@ -1,0 +1,45 @@
+<!-- <p>studentform works!</p> -->
+
+<div class="container">
+    <div class="row justify-content-center g-6">
+        <div class="col-md-7 text-left rounded shadow py-4">
+        <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+            <div class="form-group">
+               <h3>Student Registration Form</h3>
+                <br>
+                <label for="firstname">First Name </label>
+                <input type="text" class="form-control" id="firstname"  name="firstname" placeholder="First Name" ngModel required>
+           
+
+                <label for="middlename">middle Name </label>
+                <input type="text" class="form-control" id="middlename"  name="middlename" placeholder="middle Name" ngModel required>
+                
+
+                <label for="lastname">Last Name </label> 
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" ngModel required>
+            </div>
+            <div class="form-group">
+                <div class="col">
+                <label for="birthdate"  class="Birthd">Birth Date</label> 
+                <input type="date" id="birthdate" name="birthdate" ngModel required >
+            </div>
+        </div>
+        <div class="form-group">
+            
+            <!-- <label for="gender"  class="Birthd">gender</label>  -->
+            <label for="gender">Gender</label>
+            <input type="radio" id="gender" name="male" checked="false"  ngModel required ><label>Male</label>
+            <input type="radio" id="gender" name="Female" checked="true" ngModel required><label>Female</label>
+    </div>
+
+            <div class="form-group">
+                <button type="submit"  class="btn btn-primary">Submit</button>
+            </div>
+            
+               
+           
+
+        </form>
+    </div>
+    </div>
+</div>

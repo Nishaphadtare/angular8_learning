@@ -23,6 +23,8 @@ import HooksComponent from './hooks/hooks.component';
 import { AssigndirectivesComponent } from './assigndirectives/assigndirectives.component';
 import { DocheckassigComponent } from './docheckassig/docheckassig.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
+import { AccountformComponent } from './accountform/accountform.component';
+import { StudentformComponent } from './studentform/studentform.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { SimpleformComponent } from './simpleform/simpleform.component';
     AssigndirectivesComponent,
     DocheckassigComponent,
     SimpleformComponent,
+    AccountformComponent,
+    StudentformComponent,
     
   ],
   imports: [
