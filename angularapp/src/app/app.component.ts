@@ -37,6 +37,7 @@ product: Product = new Product();
   Destroy(){
     this.appchildExilt = false;
   }
+  
 
   handleData(value) {
     this.data= value.target.value

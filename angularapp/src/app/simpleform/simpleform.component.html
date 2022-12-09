@@ -4,22 +4,26 @@
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-5">
             <form (ngSubmit)="Onsubmit(myForm)" #myForm="ngForm">
-
+                
+                <div ngModelGroup="userDetails" #userDetails="ngModelGroup">
+                    
                 <div class="form-group">
                     <label for="username"> User Name </label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name" ngModel required>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name" [(ngModel)]="username" required>
+                    <small *ngIf="username">User name is: {{username}} </small>
                 </div>
-
+]
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" email name="email" placeholder="Enter Email "
-                             ngModel required>
-
+                    <input type="email" class="form-control" id="email" #email="ngModel" email name="email" placeholder="Enter Email" ngModel required>
+                    <small class="text-danger" *ngIf="!email.valid && email.touched"> Enter Valid email</small>
                 </div>
+                <small *ngIf="userDetails.valid && userDetails.touched">Please enter valid details</small>
+            </div>
 
                 <div class="form-group">
                     <label for="course">Select Course</label>
-                    <select name="course" id="course" name="course" class="form-control" ngModel required>
+                    <select name="course" id="course" name="course" class="form-control" [ngModel]="defaultValue">
                         <option value="Angular">Angular</option>
                         <option value="CSS">CSS</option>
                         <option value="Javascript">Javascript</option>
@@ -28,8 +32,15 @@
                 </div>
 
                 <br>
-                <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
-
+                <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary"> Submit </button>
+                <div class="row justify-content-center mt-2" *ngIf="submitted">
+                    <div class="col-md-6 rounded shadow py-4">
+                        <h2> Form Data</h2>
+                        <p>Username: <strong> {{employee.Username}} </strong> </p>
+                        <p>Email: <strong> {{employee.Email}} </strong> </p>
+                        <p>course: <strong>{{employee.course}}> </p>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

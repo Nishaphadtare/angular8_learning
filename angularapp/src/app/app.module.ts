@@ -25,6 +25,7 @@ import { DocheckassigComponent } from './docheckassig/docheckassig.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { AccountformComponent } from './accountform/accountform.component';
 import { StudentformComponent } from './studentform/studentform.component';
+import { StudentregistrationComponent } from './studentregistration/studentregistration.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { StudentformComponent } from './studentform/studentform.component';
     SimpleformComponent,
     AccountformComponent,
     StudentformComponent,
+    StudentregistrationComponent,
     
   ],
   imports: [
