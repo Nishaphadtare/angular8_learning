@@ -24,9 +24,7 @@ import { AssigndirectivesComponent } from './assigndirectives/assigndirectives.c
 import { DocheckassigComponent } from './docheckassig/docheckassig.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { AccountformComponent } from './accountform/accountform.component';
-import { StudentformComponent } from './studentform/studentform.component';
-import { StudentregistrationComponent } from './studentregistration/studentregistration.component';
-
+import { FormComponent } from './form/form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,8 +48,9 @@ import { StudentregistrationComponent } from './studentregistration/studentregis
     DocheckassigComponent,
     SimpleformComponent,
     AccountformComponent,
-    StudentformComponent,
-    StudentregistrationComponent,
+    FormComponent
+    
+   
     
   ],
   imports: [
