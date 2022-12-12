@@ -7,7 +7,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { warningComponent } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TwowayComponent } from './twoway/twoway.component';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
@@ -26,6 +26,8 @@ import { SimpleformComponent } from './simpleform/simpleform.component';
 import { AccountformComponent } from './accountform/accountform.component';
 import { FormComponent } from './form/form.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { AssignReactiveFormComponent } from './assign-reactive-form/assign-reactive-form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +52,9 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     SimpleformComponent,
     AccountformComponent,
     FormComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    AssignReactiveFormComponent,
+   
     
    
     
@@ -60,6 +64,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

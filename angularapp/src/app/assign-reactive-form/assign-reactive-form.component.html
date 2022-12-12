@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 rounded-shodow py-4">
+            <form (ngSubmit)="Onsubmit(myForm)" #myForm="ngForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" email id="email" name="email" placeholder="abc@gmail.com" #email="ngModel" ngModel required>
+                    <small class="text=danger" *ngIf="!email.valid && email.touched">Please enter valid Email Id</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="subscription">Select subscription</label>
+                    <select name="subscription" id="subscription" class="form-control" [ngModel]="defaultValue">
+                        <option value="Basic">Basic</option>
+                        <option value="Advance">Advance</option>
+                        <option value="Pro">Pro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">password</label>
+                    <input type="text" class="form-control" id="password" name="password" placeholder="Enter password" ngModel required>
+                    <small class="text=danger" *ngIf="!password.valid && password.touched">Please Enter password</small>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
