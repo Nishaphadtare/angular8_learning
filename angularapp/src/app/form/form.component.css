@@ -1,0 +1,15 @@
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+    box-shadow: 0 0 13px red;
+}
+h1{
+    color: white;
+    background-color: black;
+    margin-bottom: 30px;
+}
+/* .register{
+    background-image: url(../water-background-blue-drops-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+}
+     */

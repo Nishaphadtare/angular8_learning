@@ -15,14 +15,10 @@
 
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" #email="ngModel" email name="email" placeholder="Enter Email"  pattern="^[a-zA-Z0-9]+@codemindtechnology\.[a-zA-z]+$" ngModel required/>
-                    <small class="text-danger" *ngIf="!email.valid && email.touched">Please enter valid Email  only @codemindtechnology.com</small>
+                    <input type="email" class="form-control" id="email" #email="ngModel" email name="email" placeholder="Enter Email" ngModel required/>
+                    <small class="text-danger" *ngIf="!email.valid && email.touched">Please enter valid Email </small>
                 </div>
                 <small *ngIf="userDetails.valid && userDetails.touched">Please enter valid details</small>
-            </div>
-            <div class="form-group">
-                <label for="date">Regitration Date:</label><br>
-                <input type="date" min="{{currentDate |date:'yyyy-MM-dd'}}" placeholder="Date">
             </div>
 
                 <div class="form-group">

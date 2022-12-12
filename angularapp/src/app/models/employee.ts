@@ -3,4 +3,8 @@ export class Employee{
     username: string;
     email:string;
     gender:string
+    country: string;
+    date: string;
+    contact: string;
+
 }

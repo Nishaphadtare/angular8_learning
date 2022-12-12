@@ -12,7 +12,8 @@ export class FormComponent implements OnInit {
   constructor() { }
 
   defaultGender: string = 'Female'
-  defaultValue: string = "Angular";
+  defaultValue: string = "Angular"
+  defaultCountry: string = "India"
   employee = new Employee();
   submitted: boolean = false;
   genders = [
@@ -29,13 +30,15 @@ export class FormComponent implements OnInit {
     this.employee.username = form.value.userDetails.username; // we can use userDetails because this is form-group
     this.employee.email = form.value.userDetails.email; // form-group
     this.employee.gender = form.value.gender;
-
+    this.employee.country = form.value.country;
+    this.employee.date = form.value.date;
+    this.employee.contact = form.value.contact;
     // console.log(form.value.course);
     // console.log(form.value.userDetails.username);
     // console.log(form.value.userDetails.email);
     form.reset();
     form.controls['course'].setValue('Angular'),
-    form.controls['gender'].setValue('Female')
+    form.controls['gender'].setValue('Female'),
     console.log(form.controls);
     
     

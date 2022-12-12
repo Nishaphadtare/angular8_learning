@@ -7,7 +7,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { warningComponent } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TwowayComponent } from './twoway/twoway.component';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
@@ -25,6 +25,7 @@ import { DocheckassigComponent } from './docheckassig/docheckassig.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { AccountformComponent } from './accountform/accountform.component';
 import { FormComponent } from './form/form.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { FormComponent } from './form/form.component';
     DocheckassigComponent,
     SimpleformComponent,
     AccountformComponent,
-    FormComponent
+    FormComponent,
+    ReactiveformComponent
     
    
     
@@ -56,7 +58,8 @@ import { FormComponent } from './form/form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
