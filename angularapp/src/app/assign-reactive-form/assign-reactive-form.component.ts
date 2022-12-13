@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-assign-reactive-form',
@@ -7,31 +7,48 @@ import { FormControl, FormGroup, NgForm } from '@angular/forms';
   styleUrls: ['./assign-reactive-form.component.css']
 })
 export class AssignReactiveFormComponent implements OnInit {
+  notAllowedNames = ['Codemind', 'Sevenmind', 'Technology']
 
-
-  email:string
-  subscription:string;
-  password:any;
-  submit: boolean = false;
-
-  defaultValue:string ='Advance'
-  
-  // myReactForm : FormGroup;
+  genders = [
+    {
+      id : '1',
+      value: 'Male'
+    },
+    {
+      id: '2',
+      value: 'Female'
+    },
+    {
+      id: '3',
+      value: 'Other'
+    }
+  ]
+  myReactiveForm : FormGroup;
   constructor() { 
-    // this.createForm();
+    this.createForm();
   }
-  // createForm() {
-
-  //   this.myReactForm = new FormGroup({
-  //     'email' : new FormControl(),
-  //   })
-  // }
-
-  ngOnInit() {
+  createForm(){
+    this.myReactiveForm = new FormGroup({
+      'username' : new FormControl('', [Validators.required, this.NoNames.bind(this)]),
+      'email' : new FormControl('',[Validators.required, Validators.email]),
+      'course' : new FormControl('Javascript'),
+      'gender': new FormControl('')
+    })
   }
 
-  Onsubmit(form:NgForm){
-    this.submit=true
+  Onsubmit(){
+   console.log(this.myReactiveForm);
    
   }
+  ngOnInit() {
+  }
+NoNames(control: FormControl)
+{
+  if(this.notAllowedNames.indexOf(control.value) !== -1){
+    return {'namesNotAllowed': true}
+  }
+  return null;
+}
+
+ 
 }

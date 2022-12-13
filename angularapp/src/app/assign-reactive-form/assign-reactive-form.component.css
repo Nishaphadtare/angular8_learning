@@ -3,3 +3,15 @@ input.ng-invalid.ng-touched{
     border: 1px solid red;
     box-shadow: 0 0 13px red;
 }
+.container{
+    margin-top: 30px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    background-color:powderblue ;
+}
+h2{
+    margin-bottom: 30px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}

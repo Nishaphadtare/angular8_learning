@@ -1,13 +1,41 @@
-<!-- <p>reactiveform works!</p> -->
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6 text-left rounded-shadow py-5">
-            <form [formGroup]="myReactiveForm" (ngSubmit)="Onsubmit()">
-            <input type="text" name="" id=""  formControlName="username" placeholder="Enter user name">
-            <input type="text" name="" id="" formControlName="email" placeholder="Enter email address">
-            <button class="btn btn-success">Submit</button>
-        </form>
+<div class="row justify-content-center">
+    <div class="col-md-6 rounded-shadow py-5">
+        <form [formGroup]="myReactiveForm" (ngSubmit)="Onsubmit()">
 
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" formControlName="username" placeholder="Enter user name">
+                <small class="text-danger" *ngIf="!myReactiveForm.get('username').valid && myReactiveForm.get('username').touched">
+                    <small *ngIf="myReactiveForm.get('username').errors['required']"> Please enter user name</small>
+                </small>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="email" formControlName="email"  placeholder="Enter email">
+                <small class="text-danger" *ngIf="!myReactiveForm.get('email').valid && myReactiveForm.get('email').touched">Please enter valid Email Id</small>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Select Course</label>
+                <select  id="course" formControlName="course" class="form-control">
+                    <option value="Angular">Angular</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="HTML">HTML</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <div class="custom-control custom-radio" *ngFor="let gender of genders">  
+                    <input type="radio" class="custom-control-input" id="{{gender.id}}" value="{{gender.value}}" formControlName="gender">
+                    <label for="{{gender.id}}">{{gender.value}}</label>
+                </div>
+        
         </div>
+     
+
+            <button class="btn btn-success col-md-4">Submit</button>
+        </form>
     </div>
+</div>
 </div>

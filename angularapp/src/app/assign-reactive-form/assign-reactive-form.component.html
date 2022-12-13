@@ -1,29 +1,46 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-4 rounded-shodow py-4">
-            <form (ngSubmit)="Onsubmit(myForm)" #myForm="ngForm">
+    <div class="row justify-content-center">
+        <div class="col-md-6 rounded-shadow py-5">
+            <form [formGroup]="myReactiveForm" (ngSubmit)="Onsubmit()">
+
+                <h2> Reactive Form </h2>
+
+                <div class="form-group">
+                    <label for="usename">UserName</label>
+                    <input type="text" id="username" class="form-control" formControlName="username"
+                        placeholder="Enter user name">
+                    <small class="text-danger" *ngIf="!myReactiveForm.get('username').valid && myReactiveForm.get('username').touched">
+                        <small *ngIf="myReactiveForm.get('username').errors['required']">codemind is not allowed</small>
+                    </small>
+                </div>
+
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" class="form-control" email id="email" name="email" placeholder="abc@gmail.com" #email="ngModel" ngModel required>
-                    <small class="text=danger" *ngIf="!email.valid && email.touched">Please enter valid Email Id</small>
+                    <input type="text" id="email" class="form-control" formControlName="email" placeholder="Enter Email">
+                    <small class="text-danger"
+                        *ngIf="!myReactiveForm.get('email').valid && myReactiveForm.get('email').touched">Please enter
+                        valid Email Id</small>
                 </div>
 
                 <div class="form-group">
-                    <label for="subscription">Select subscription</label>
-                    <select name="subscription" id="subscription" class="form-control" [ngModel]="defaultValue">
-                        <option value="Basic">Basic</option>
-                        <option value="Advance">Advance</option>
-                        <option value="Pro">Pro</option>
+                    <label for="course">Select Course</label>
+                    <select id="course" formControlName="course" class="form-control">
+                        <option value="Angular">Angular</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="HTML">HTML</option>
                     </select>
                 </div>
-
                 <div class="form-group">
-                    <label for="password">password</label>
-                    <input type="text" class="form-control" id="password" name="password" placeholder="Enter password" ngModel required>
-                    <small class="text=danger" *ngIf="!password.valid && password.touched">Please Enter password</small>
+                    <div class="custom-control custom-radio" *ngFor="let gender of genders">
+                        <input type="radio" id="{{gender.id}}" value="{{gender.value}}" class="custom-control-input" formControlName="gender">
+                        <label for="{{gender.id}}">{{gender.value}}</label>
+                    </div>
                 </div>
-            </form>
 
+                <button class="btn btn-success">Submit</button>
+
+            </form>
         </div>
     </div>
 </div>
