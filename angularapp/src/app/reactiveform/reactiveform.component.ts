@@ -45,11 +45,10 @@ export class ReactiveformComponent implements OnInit {
   
   createForm(){
     this.myReactiveForm = new FormGroup({
-      'userDetails':ner FormGroup({
-        'username' : new FormControl('', [Validators.required, this.NaNames.bind(this)]),
+      'userDetails':new FormGroup({
+      'username' : new FormControl('', [Validators.required, this.NaNames.bind(this)]),
       'email' : new FormControl('', [Validators.required, Validators.email, this.NaEmails])
       }),
-      
       'course' : new FormControl('Angular'),
       'gender' : new FormControl('')
     })
