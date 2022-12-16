@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ControlContainer, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ControlContainer, FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { format } from 'util';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./reactiveform.component.css']
 })
 export class ReactiveformComponent implements OnInit {
+  submitted : boolean = false;
 
   notAllowedNames = ["Codemind", "Technology"]
 
@@ -49,14 +51,23 @@ export class ReactiveformComponent implements OnInit {
       'username' : new FormControl('', [Validators.required, this.NaNames.bind(this)]),
       'email' : new FormControl('', [Validators.required, Validators.email, this.NaEmails])
       }),
-      'course' : new FormControl('Angular'),
-      'gender' : new FormControl('')
+      'course' : new FormControl(''),
+      'gender' : new FormControl(''),
+      'skills' : new FormArray([
+        new FormControl(null, Validators.required),
+        // new FormControl(null)
+      ])
     })
   }
   Onsubmit(){
+    this.submitted = true;
     console.log(this.myReactiveForm);
-    var selectedvalue = "";
+
+    // var selectedvalue = "";
     
+  }
+  OnAddSkills(){
+    (<FormArray> this.myReactiveForm.get('skills')).push(new FormControl(null, Validators.required));
   }
   NaNames(control: FormControl)
   {

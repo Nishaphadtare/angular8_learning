@@ -1,0 +1,8 @@
+export class Employees{
+    FirstName : string;
+    LastName : string;
+    age : string;
+    Email : string;
+    city: string;
+    phone: string;
+}
