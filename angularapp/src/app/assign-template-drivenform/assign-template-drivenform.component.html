@@ -6,18 +6,18 @@
             
                 <div class="form-group">
                     <label for="firstname">FirstName</label>
-                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Enter First Name" ngModel required>
-                    <small class="text-danger" *ngIf="firstname">First name is required Enter atleast 5 Characters : {{firstname}}</small>
+                    <input type="text" class="form-control" name="firstname" #firstname="ngModel" firstname id="firstname" placeholder="Enter First Name" minlength="5" ngModel required>
+                    <small class="text-danger" *ngIf="!firstname.valid && firstname.touched">First name is required Enter atleast 5 Characters</small>
                 </div>
                 <div class="form-group">
                     <label for="lastname">Last Name</label>
-                    <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter Last name" ngModel required>
-                    <small class="text-danger" *ngIf="lastname">Enter Last Name: {{lastname}}</small>
+                    <input type="text" class="form-control" name="lastname" #lastname="ngModel" lastname id="lastname" placeholder="Enter Last name" minlength="5" ngModel required>
+                    <small class="text-danger" *ngIf="!lastname.valid && lastname.touched">Enter Last Name</small>
                 </div>
                 <div class="form-group">
                     <label for="age">Age</label>
-                    <input type="text" class="form-control" name="age" id="age" placeholder="Enter Age" ngModel required>
-                    <small class="text-danger" *ngIf="age">Enter age : {{age}}</small>
+                    <input type="text" class="form-control" name="age" #age="ngModel" age id="age" placeholder="Enter Age" ngModel required>
+                    <small class="text-danger" *ngIf="!age.valid && age.touched">Enter age </small>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>

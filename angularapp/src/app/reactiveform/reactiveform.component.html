@@ -8,7 +8,7 @@
                 <input type="text" class="form-control" id="username" formControlName="username" placeholder="Enter user name">
                 <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.username').valid && myReactiveForm.get('userDetails.username').touched">
                     <small *ngIf="myReactiveForm.get('userDetails.username').errors['required']"> Please enter user name</small>
-                    <small *ngIf="myReactiveForm.get('userDetails.username').errors['namesNotAllowed']"> user name not allowed {{myReactiveForm.get('userDetails.username').value}}</small>
+                    <!-- <small *ngIf="myReactiveForm.get('userDetails.username').errors['namesNotAllowed']"> user name not allowed {{myReactiveForm.get('userDetails.username').value}}</small> -->
                 </small>
             </div>
 

@@ -28,6 +28,8 @@ import { FormComponent } from './form/form.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { AssignReactiveFormComponent } from './assign-reactive-form/assign-reactive-form.component';
 import { AssignTemplateDrivenformComponent } from './assign-template-drivenform/assign-template-drivenform.component';
+import { AsignReactiveformsComponent } from './asign-reactiveforms/asign-reactiveforms.component';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { AssignTemplateDrivenformComponent } from './assign-template-drivenform/
     ReactiveformComponent,
     AssignReactiveFormComponent,
     AssignTemplateDrivenformComponent,
+    AsignReactiveformsComponent,
+
    
     
    
