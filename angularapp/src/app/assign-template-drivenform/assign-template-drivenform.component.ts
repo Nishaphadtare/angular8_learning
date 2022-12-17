@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Employee } from '../models/employee';
+import { User } from '../models/templateDrivenform';
 
 
 @Component({
@@ -10,10 +11,9 @@ import { Employee } from '../models/employee';
 })
 export class AssignTemplateDrivenformComponent implements OnInit {
   
-stubmitted : boolean =false;
+stubmitted : boolean = false;
 defaultGender : string = 'Female';
-firstname: string;
-// employee = new Employee();
+user = new User();
 genders = [
   {
     id :'1', 
@@ -26,24 +26,24 @@ genders = [
 ]
   constructor() { }
 
+
   ngOnInit() {
   }
   OnSubmit(form: NgForm){
     this.stubmitted = true;
-    console.log(form.value.firstname);
-    console.log(form.value.lastname);
-    console.log(form.value.email);
-    console.log(form.value.phone);
+    this.user.firstname = form.value.firstname;
+    this.user.lastname = form.value.lastname;
+    this.user.age = form.value.age;
+    this.user.city = form.value.city;
+    this.user.password = form.value.password;
+    this.user.confirmpassword = form.value.confirmpassword;
+    this.user.phone = form.value.phone;
+    form.reset();
+    form.controls['gender'].setValue('Female');
+    console.log(form.controls);
     
-    
-    
-    
+
   
-    // this.username.value;
-    // form.reset();
-      // form.controls['gender'].setValue['Feamil']
-      // console.log(form.controls);
-      
     }
   }
 

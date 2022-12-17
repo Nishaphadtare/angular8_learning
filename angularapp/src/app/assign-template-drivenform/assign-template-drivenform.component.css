@@ -2,3 +2,15 @@ input.ng-invalid.ng-touched{
     border: 1px solid red;
     box-shadow: 0 0 13px red;
 }
+input{
+    margin: 10px;
+}
+h2{
+    color: blue;
+}
+.container{
+   background-color: rgb(225, 222, 222)
+}
+.text-danger{
+    font-size: larger;
+}
