@@ -29,6 +29,14 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { AssignReactiveFormComponent } from './assign-reactive-form/assign-reactive-form.component';
 import { AssignTemplateDrivenformComponent } from './assign-template-drivenform/assign-template-drivenform.component';
 import { AsignReactiveformsComponent } from './asign-reactiveforms/asign-reactiveforms.component';
+import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
+import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
+import { ValidationReactivFormComponent } from './validation-reactiv-form/validation-reactiv-form.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { DemoService } from './services/demo.service';
 
 
 @NgModule({
@@ -59,6 +67,13 @@ import { AsignReactiveformsComponent } from './asign-reactiveforms/asign-reactiv
     AssignReactiveFormComponent,
     AssignTemplateDrivenformComponent,
     AsignReactiveformsComponent,
+    Servicecomp1Component,
+    Servicecomp2Component,
+    ValidationReactivFormComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
 
    
     
@@ -70,6 +85,8 @@ import { AsignReactiveformsComponent } from './asign-reactiveforms/asign-reactiv
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
+   
+
     
   ],
   providers: [],

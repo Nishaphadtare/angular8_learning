@@ -1,0 +1,21 @@
+<p>validation-reactiv-form works!</p>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded-dhadow py-5">
+            <form [formGroup]="myReactiveForm" (ngSubmit)="Onsubmit()">
+                <div class="form-control">
+                    <label for="projectname">Project Name</label>
+                    <input type="text" class="projectname" id="projectname" formControlName="projectname" placeholder="Enter Project Name">
+                    <small class="tex-danger" *ngIf="!myReactiveForm.get('projectname').valid && myReactiveForm.get('projectname').touched">
+                        <small *ngIf="myReactiveForm.get('projectname').errors['required']">Please Enter Project Name</small>
+                    </small>
+                </div>
+                <div></div>
+                <div></div>
+
+                <button class="btn btn-success">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

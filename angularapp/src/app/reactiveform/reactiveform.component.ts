@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ControlContainer, FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ControlContainer, FormArray, FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { format } from 'util';
 
@@ -11,7 +11,7 @@ import { format } from 'util';
 })
 export class ReactiveformComponent implements OnInit {
   submitted : boolean = false;
-
+  removeItem :boolean = false;
   notAllowedNames = ["Codemind", "Technology"]
 
  genders = [
@@ -27,10 +27,15 @@ export class ReactiveformComponent implements OnInit {
  ]
 
   myReactiveForm: FormGroup;
-  constructor() { 
+  constructor(private _fb: FormBuilder) { 
     this.createForm();
   }
 
+  removeFormControl(index: number): void
+  {
+   (<FormArray>this.myReactiveForm.get('skills')).removeAt(index)
+    
+  }
   ngOnInit() {
 
     
@@ -46,17 +51,27 @@ export class ReactiveformComponent implements OnInit {
   }
   
   createForm(){
-    this.myReactiveForm = new FormGroup({
-      'userDetails':new FormGroup({
-      'username' : new FormControl('', [Validators.required, this.NaNames.bind(this)]),
-      'email' : new FormControl('', [Validators.required, Validators.email, this.NaEmails])
+    // this.myReactiveForm = new FormGroup({
+    //   'userDetails':new FormGroup({
+    //   'username' : new FormControl('', [Validators.required, this.NaNames.bind(this)]),
+    //   'email' : new FormControl('', [Validators.required, Validators.email, this.NaEmails])
+    //   }),
+    //   'course' : new FormControl(''),
+    //   'gender' : new FormControl(''),
+    //   'skills' : new FormArray([
+    //     new FormControl(null, Validators.required),
+    //     // new FormControl(null)
+    //   ])
+    // })
+
+    this.myReactiveForm = this._fb.group({
+      userDetails: this._fb.group({
+        username: ['',Validators.required],
+        email: ['',Validators.required]
       }),
-      'course' : new FormControl(''),
-      'gender' : new FormControl(''),
-      'skills' : new FormArray([
-        new FormControl(null, Validators.required),
-        // new FormControl(null)
-      ])
+      course: ['Angular'],
+      gender: ['Female'],
+      skills:this._fb.array([])
     })
   }
   Onsubmit(){
@@ -64,8 +79,13 @@ export class ReactiveformComponent implements OnInit {
     console.log(this.myReactiveForm);
 
     // var selectedvalue = "";
-    
   }
+  // remove(){
+  //   this.removeItem = true;
+  //   console.log(this.myReactiveForm);
+    
+  // }
+
   OnAddSkills(){
     (<FormArray> this.myReactiveForm.get('skills')).push(new FormControl(null, Validators.required));
   }
@@ -88,7 +108,5 @@ export class ReactiveformComponent implements OnInit {
     })
     return myResponse;
   }
-
   
-
 }

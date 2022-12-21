@@ -1,10 +1,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 text-left rounded-shadow py-5">
-            <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm" >
+            <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
                 <h2>Student Registration Form</h2>
                 <hr>
-            
                 <div class="form-group">
                     <label for="firstname">FirstName</label>
                     <input type="text" class="form-control" name="firstname" #firstname="ngModel" firstname id="firstname" placeholder="Enter First Name" minlength="5" ngModel required>
