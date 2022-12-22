@@ -1,0 +1,43 @@
+<!-- <p>assign-pipes works!</p> -->
+<div container  class="text">
+   <div class="row justify-content-center">
+    <div class="col-md-6 text-left rounded-shadow py-5">
+<h2>Built-In-Pipes</h2>
+<hr>
+<h4>Date</h4>
+<hr>
+<div>
+    Today's date : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{todaysDate}}
+    <br>
+    Today's date by using pipe :  &nbsp; {{todaysDate | date}}
+    <br>
+    
+    Today's date fullDate : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{todaysDate | date: 'fullDate'}}
+    <br>
+    Today's date shortDate : &nbsp; &nbsp; &nbsp; {{todaysDate | date: 'shortDate'}}
+    <br>
+    Today's date uppercase : &nbsp; &nbsp; &nbsp; {{todaysDate | date: 'fullDate' | uppercase}}
+    <br>
+    Today's date lowercase : &nbsp; &nbsp; &nbsp; {{todaysDate | date: 'fullDate' | lowercase}}
+</div>
+<br>
+<hr>
+<h4>Currency</h4>
+<div>
+    currency pipe : &nbsp; &nbsp; &nbsp; {{price |currency: 'INR'}}<br>
+    currency pipe : &nbsp; &nbsp; &nbsp; {{price |currency: 'USD'}}
+</div>
+<hr>
+<h4>Custom Pipe</h4>
+<div>
+    custom Pipe : &nbsp; &nbsp; &nbsp; {{price | assignpipe}}
+    <br>
+    custom Pipe : &nbsp; &nbsp; &nbsp; {{price1 | assignpipe}}
+</div>
+<hr>
+<h4>json Pipe</h4>
+<div>
+    json pipe : &nbsp; &nbsp; &nbsp; {{obj | json}}
+</div>
+</div>
+</div>

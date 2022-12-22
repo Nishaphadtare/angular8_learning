@@ -31,12 +31,17 @@ import { AssignTemplateDrivenformComponent } from './assign-template-drivenform/
 import { AsignReactiveformsComponent } from './asign-reactiveforms/asign-reactiveforms.component';
 import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
 import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
+import {HttpClientModule} from '@angular/common/http';
 import { ValidationReactivFormComponent } from './validation-reactiv-form/validation-reactiv-form.component';
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
-import { DemoService } from './services/demo.service';
+import { PipesComponent } from './pipes/pipes.component';
+import { AssignPipesComponent } from './assign-pipes/assign-pipes.component';
+import { CountPipe } from './count.pipe';
+import { AssignpipePipe } from './assignpipe.pipe';
+
 
 
 @NgModule({
@@ -74,6 +79,10 @@ import { DemoService } from './services/demo.service';
     Comp2Component,
     Comp3Component,
     Comp4Component,
+    PipesComponent,
+    AssignPipesComponent,
+    CountPipe,
+    AssignpipePipe,
 
    
     
@@ -84,7 +93,8 @@ import { DemoService } from './services/demo.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
    
 
     

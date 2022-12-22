@@ -12,4 +12,13 @@ export class Comp2Component implements OnInit {
   ngOnInit() {
   }
 
+  updateUserName(uname){
+    console.log(uname.value);
+    let emp = {
+      name : 'Nisha',
+      id : '101'
+    }
+    // next method is used to send message to an observable i.e username
+    // this._utililtlylService.username.next(JSON.stringify(emp));
+    }
 }
