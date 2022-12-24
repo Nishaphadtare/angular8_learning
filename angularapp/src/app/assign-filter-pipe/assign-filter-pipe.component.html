@@ -1,0 +1,37 @@
+<!-- <p>assign-filter-pipe works!</p> -->
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 form-inline mb-2">
+            <label for="emp">Employee: </label>
+            <br><br/>
+            <input type="text" class="form-control" id="emp" placeholder="search employee" [(ngModel)]="gender">
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+
+                <thead class="col">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Salary</th> 
+                </tr>
+            </thead>
+                <tbody>
+                    <tr *ngFor="let emp of empArr">
+                        <td scope="row">{{emp.id}}</td>
+                        <td>{{emp.name | assfilterpipe : emp.gender}}</td>
+                        <td>{{emp.gender}}</td>
+                        <td>{{emp.dob}}</td>
+                        <td>{{emp.company}}</td>
+                        <td>{{emp.salary}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

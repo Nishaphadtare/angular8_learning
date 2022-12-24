@@ -37,10 +37,16 @@ import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
-import { PipesComponent } from './pipes/pipes.component';
+// import { PipesComponent } from './pipes/pipes.component';
 import { AssignPipesComponent } from './assign-pipes/assign-pipes.component';
 import { CountPipe } from './count.pipe';
 import { AssignpipePipe } from './assignpipe.pipe';
+import { FilterPipesComponent } from './filter-pipes/filter-pipes.component';
+import { FilterPipe } from './filter.pipe';
+import { AssignFilterPipeComponent } from './assign-filter-pipe/assign-filter-pipe.component';
+import { AssfilterpipePipe } from './assfilterpipe.pipe';
+import { pipe } from 'rxjs';
+
 
 
 
@@ -79,10 +85,15 @@ import { AssignpipePipe } from './assignpipe.pipe';
     Comp2Component,
     Comp3Component,
     Comp4Component,
-    PipesComponent,
+    // PipesComponent,
     AssignPipesComponent,
     CountPipe,
     AssignpipePipe,
+    FilterPipesComponent,
+    FilterPipe,
+    AssignFilterPipeComponent,
+    AssfilterpipePipe,
+   
 
    
     
@@ -100,6 +111,6 @@ import { AssignpipePipe } from './assignpipe.pipe';
     
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

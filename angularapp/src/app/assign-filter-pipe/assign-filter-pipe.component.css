@@ -1,0 +1,9 @@
+
+.container{
+    background-color: rgb(202, 244, 190);
+    margin-top: 90px;
+}
+table{
+    border-radius: 2px;
+    border-color: black;
+}
