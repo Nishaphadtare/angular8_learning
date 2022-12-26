@@ -1,0 +1,22 @@
+<p>login works!</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <h2>Login Form</h2>
+            <form (ngLogin)="OnLogin(myForm)" #myForm="ngForm">
+            <div class="form-group">
+            <label for="email">Login</label>
+            <input type="text" name="email" class="form-control" id="email" #email="ngModel" email placeholder="Enter Email" ngModel required>
+            <small class="text-danger" *ngIf="!email.valid && email.touched">Please enter valid Email </small>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" ngModel required>
+            <!-- <small class="text-danger">enter password</small> -->
+        </div>
+        <br>
+        <button class="btn btn-primary" [disabled]="!myForm.valid">Login</button>
+    </form>
+</div>
+    </div>
+</div>

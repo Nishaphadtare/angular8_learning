@@ -46,6 +46,12 @@ import { FilterPipe } from './filter.pipe';
 import { AssignFilterPipeComponent } from './assign-filter-pipe/assign-filter-pipe.component';
 import { AssfilterpipePipe } from './assfilterpipe.pipe';
 import { pipe } from 'rxjs';
+import { HomeComponent } from './home/home.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ProductComponent } from './product/product.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { LoginComponent } from './login/login.component';
+import { PageNotFooundComponent } from './page-not-foound/page-not-foound.component';
 
 
 
@@ -93,6 +99,12 @@ import { pipe } from 'rxjs';
     FilterPipe,
     AssignFilterPipeComponent,
     AssfilterpipePipe,
+    HomeComponent,
+    AboutUsComponent,
+    ProductComponent,
+    ContactUsComponent,
+    LoginComponent,
+    PageNotFooundComponent,
    
 
    

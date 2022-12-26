@@ -1,0 +1,14 @@
+h3{
+    text-shadow: 5px 3px 9px rgb(250, 24, 175);
+    font-style: italic;
+}
+ul li{
+    margin-bottom: 20px;
+}
+.list_roles{
+font-style: unset;
+font-size: larger;
+}
+.list_roles li::selection{
+background: cadetblue;
+}
