@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Product } from './models/product';
 import { DemoService } from './services/demo.service';
+import { PostService } from './services/post.service';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +11,16 @@ import { DemoService } from './services/demo.service';
 })
 export class AppComponent implements OnInit {
 
-constructor(private _demoService: DemoService){
+constructor(private _demoService: DemoService, private _postService: PostService){
 
 }
   ngOnInit(): void {
     this._demoService.getUserData().subscribe(data => {
       console.log('getting data form api', data);
+      
+    })
+    this._demoService.getDataPosts().subscribe(results => {
+      console.log('posts', results);
       
     })
   }
@@ -59,5 +64,10 @@ product: Product = new Product();
     // this.product = new Product; 
     this.product.name = this.name;
     this.product.pricce = this.price;
+  }
+  DeletePost(){
+    this._postService.deletePostById(1).subscribe(res => {
+      console.log(res);
+    })
   }
 }

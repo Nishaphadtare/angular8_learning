@@ -3,9 +3,15 @@
         "assfilterpipe",
         "Codemind",
         "courseDuration",
+        "Custdir",
         "devkit",
         "jasminewd",
         "namesearch",
+        "postdetails",
+        "rapidapi",
         "Studentform"
+    ],
+    "cSpell.ignoreWords": [
+        "checkuser"
     ]
 }

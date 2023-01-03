@@ -18,7 +18,15 @@ export class DemoService {
     alert('Subscribed Successfully');
   }
 
+  calculateAge(date){
+
+  }
+
   getUserData(){
     return this.http.get(this.apiURL);
   }
+   getDataPosts(){
+    let posts = 'posts'
+    return this.http.get(this.apiURL+ posts)
+   }
 }

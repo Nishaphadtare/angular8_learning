@@ -1,7 +1,11 @@
+import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 import { Component, OnInit } from '@angular/core';
 import { ControlContainer, FormArray, FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { format } from 'util';
+import { FirebasePost } from '../models/firebasepost';
+import { FirebaseService } from '../services/firebase.service';
+import {map}
 
 
 @Component({
@@ -27,7 +31,8 @@ export class ReactiveformComponent implements OnInit {
  ]
 
   myReactiveForm: FormGroup;
-  constructor(private _fb: FormBuilder) { 
+ firebasePost: FirebasePost;
+  constructor(private _fb: FormBuilder, private _firbaseService: FirebaseService) { 
     this.createForm();
   }
 
@@ -38,7 +43,21 @@ export class ReactiveformComponent implements OnInit {
   }
   ngOnInit() {
 
-    
+    const data = from(this._firbaseService.users);
+
+    // data.pipe(
+    //   map(x => x.name)
+    // )
+
+    // this._firbaseService.getPostsDataFirbase().pipe{
+    //   map(responceData) => {
+    //     const postArray = [];
+
+    //     for(const key in responseData){
+    //       if(resllponce.)
+    //     }
+    //   };ha
+    // }
     setTimeout(() => {
       this.myReactiveForm.patchValue({
         'userDetails' : {
@@ -51,6 +70,12 @@ export class ReactiveformComponent implements OnInit {
   }
   
   createForm(){
+
+    this._firbaseService.getPostsDataFirbase().subscribe(res => {
+      console.log('getPostsDataFirebase', res);
+      
+    })
+
     // this.myReactiveForm = new FormGroup({
     //   'userDetails':new FormGroup({
     //   'username' : new FormControl('', [Validators.required, this.NaNames.bind(this)]),
@@ -77,6 +102,23 @@ export class ReactiveformComponent implements OnInit {
   Onsubmit(){
     this.submitted = true;
     console.log(this.myReactiveForm);
+    console.log(this.myReactiveForm['controls'].userDetails['controls'].username.value);
+    console.log(this.myReactiveForm);
+    
+    this.firebasePost = new FirebasePost();
+    this.firebasePost.ussername = this.myReactiveForm['controls'].userDetails['controls'].username.value;
+    this.firebasePost.email = this.myReactiveForm['controls'].userDetails['controls'].email.value;
+    this.firebasePost.course = this.myReactiveForm['controls'].course.value;
+    this.firebasePost.gender = this.myReactiveForm['controls'].gender.value;
+    this.firebasePost.skills = this.myReactiveForm['controls'].skills.value;
+
+    console.log('firebase post', this.firebasePost);
+    this._firbaseService.createPostDataReactiveForm(this.firebasePost).subscribe(res => {
+      console.log('post from reactive form', res);
+      
+    })
+    
+    // this._firbaseService.createPostDataReactiveForm()
 
     // var selectedvalue = "";
   }

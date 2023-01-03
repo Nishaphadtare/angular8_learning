@@ -14,7 +14,6 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { DemocourseComponent } from './democourse/democourse.component';
 import { NgswitchassignComponent } from './ngswitchassign/ngswitchassign.component';
 import { AttriComponent } from './attri/attri.component';
-import { CustdirDirective } from './custdir.directive';
 import { DirectivesComponent } from './directives/directives.component';
 import { CusdirassinDirective } from './cusdirassin.directive';
 import { DemoComponent } from './demo/demo.component';
@@ -41,17 +40,23 @@ import { Comp4Component } from './comp4/comp4.component';
 import { AssignPipesComponent } from './assign-pipes/assign-pipes.component';
 import { CountPipe } from './count.pipe';
 import { AssignpipePipe } from './assignpipe.pipe';
-import { FilterPipesComponent } from './filter-pipes/filter-pipes.component';
+// import { FilterPipesComponent } from './filter-pipes/filter-pipes.component';
 import { FilterPipe } from './filter.pipe';
 import { AssignFilterPipeComponent } from './assign-filter-pipe/assign-filter-pipe.component';
 import { AssfilterpipePipe } from './assfilterpipe.pipe';
 import { pipe } from 'rxjs';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { ProductComponent } from './product/product.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFooundComponent } from './page-not-foound/page-not-foound.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { ProductsModule } from './product/products.module';
+import { OrdersModule } from './orders.module';
+import { AdduserComponent } from './adduser/adduser.component';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
+import { AssingrapidapiComponent } from './assingrapidapi/assingrapidapi.component';
 
 
 
@@ -69,7 +74,6 @@ import { PageNotFooundComponent } from './page-not-foound/page-not-foound.compon
     DemocourseComponent,
     NgswitchassignComponent,
     AttriComponent,
-    CustdirDirective,
     DirectivesComponent,
     CusdirassinDirective,
     DemoComponent,
@@ -95,29 +99,34 @@ import { PageNotFooundComponent } from './page-not-foound/page-not-foound.compon
     AssignPipesComponent,
     CountPipe,
     AssignpipePipe,
-    FilterPipesComponent,
+    // FilterPipesComponent,
     FilterPipe,
     AssignFilterPipeComponent,
     AssfilterpipePipe,
     HomeComponent,
     AboutUsComponent,
-    ProductComponent,
     ContactUsComponent,
     LoginComponent,
     PageNotFooundComponent,
-   
+    DemopostComponent,
+    PostdetailsComponent,
+    AdduserComponent,
+    RapidapiComponent,
+    AssingrapidapiComponent
+    // ProductsComponent,  
 
-   
-    
-   
-    
   ],
+
+
   imports: [
     BrowserModule,
+    ProductsModule ,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    OrdersModule
+
    
 
     
@@ -125,4 +134,9 @@ import { PageNotFooundComponent } from './page-not-foound/page-not-foound.compon
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule { 
+  constructor() {
+    console.log('App module called');
+    
+  }
+}

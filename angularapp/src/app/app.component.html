@@ -113,18 +113,40 @@
 <!-- <app-filter-pipes></app-filter-pipes> -->
 <!-- <app-assign-filter-pipe></app-assign-filter-pipe> -->
 
-
+<!-- <app-demopost></app-demopost> -->
 <header>
 <nav>
   <ul class="nav nav-tabs">
+    
   <li class="nav-item"> <a class="nav-link" routerLink="">Login</a> </li> 
+
   <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink ="home/">Home</a> </li> 
-  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="/product" >Product</a> </li> 
-  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="/contactus">ContactUs</a> </li> 
-  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="/simpleform">SimpleForm</a></li> 
-  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="/reactiveform">ReactiveForm</a></li> 
-  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="/assignfilterPipr">FilterPipes</a> </li> 
+
+  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="product/" >Product</a> </li> 
+
+  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="contactus/">ContactUs</a> </li>
+  
+  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="simpleform/">SimpleForm</a></li> 
+
+  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="reactiveform/">ReactiveForm</a></li> 
+  
+  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="assignfilterPipr/">FilterPipes</a> </li> 
+
+  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="post/">Posts</a></li> 
+
+  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="adduser/">AddUser</a></li> 
+  
+  <li class="nav-item"> <a class="nav-link" routerLinkActive="active myclass" routerLink ="assingrapidapi/">Rapid API</a></li> 
+
+
+
+
 </ul>
 </nav>
 </header>
+<!-- <button (click)="DeletePost()">Delete post</button> -->
+<br> <br/>
+<!-- <app-rapidapi></app-rapidapi> -->
+<!-- <app-assingrapidapi></app-assingrapidapi> -->
+
 <router-outlet></router-outlet>
